@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactApp</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type ="text/babel"> // <-- eso es el uso de babel, poder mostrar en etiquetado HTML el código JS. Babel ayuda a realizar compatibilidad de JS con cualquier navegador.
+        
+        const divRoot = document.querySelector('#root'); //Esta función obtiene la etiqueta especifica con ID.
+        const nombre = 'Goku';
+        //PUEDO USAR TANTO UNA VARIABLE O UNA CONSTANTE PARA LLAMARLA ENTRE LLAVES '{}'
+        const h1Tag = <h1>Hola, soy {nombre}</h1>;
+        // ReactDOM.render es para mostrar las constantes o variables,o lo que sea, dentro de una etiqueta definida anteriormente,
+        // se guardó la etiqueta en la constante divRoot y se guardó el mensaje en la etiqueta h1Tag, más un nombre en la constante nombre.
+        // dentro de esta función de react podemos insertar el mensaje en la etiqueta del modo que se muestra, const de la etiquera , const del mensaje.
+        ReactDOM.render(h1Tag,divRoot);
+
+    </script>
+    
+</body>
+</html>
